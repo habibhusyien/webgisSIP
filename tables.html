@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sistem Informasi Penduduk</title>
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+  <script>
+    /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+    function myFunction1() {
+      document.getElementById("myDropdown1").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <img class="img-profile rounded-circle" src="img/webicon.png" height="65">
+        </div>
+        <div class="sidebar-brand-text mx-3">Sistem Informasi Penduduk</div>
+      </a>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>WebGIS</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Informasi Penduduk
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+          aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Peta Kependudukan</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Peta Kependudukan:</h6>
+            <a class="collapse-item" href="Jumlah-Penduduk.html">Jumlah Penduduk</a>
+            <a class="collapse-item" href="Kepadatan-Penduduk.html">Kepadatan Penduduk</a>
+            <a class="collapse-item" href="Usia.html">Usia Produktif & Non Produktif</a>
+            <a class="collapse-item" href="Angka-Kelahiran.html">Angka Kelahiran</a>
+            <a class="collapse-item" href="Angka-Kematian.html">Angka Kematian</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+          aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Grafik</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Grafik:</h6>
+            <a class="collapse-item" href="Grafik-Jml-Penduduk.html">Jumlah Penduduk</a>
+            <a class="collapse-item" href="Grafik Kpdt-Penduduk.html">Kepadatan Penduduk</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Informasi Wilayah
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+          aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Luas Wilayah</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Luas Wilayah:</h6>
+            <a class="collapse-item" href="blank.html">Peta Luas Wilayah</a>
+            <a class="collapse-item" href="Tabel-luas wilayah.html">Data Luas Kecamatan</a>
+          </div>
+      </li>
+
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Data Jumlah Desa</span></a>
+      </li>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+          </ul>
+
+          <!-- Nav Item - User Information -->
+          <li class="nav-item dropdown no-arrow">
+            <span class=" mr-2 d-none d-lg-inline text-gray-600 small">Sistem Informasi Kependudukan Kabupaten
+              Bojonegoro</span>
+            <img class="img-profile rounded-circle" src="img/webicon.png" style="width: 50px">
+            </a>
+          </li>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <h6 class="h3 mb-2 text-gray-800">Data Jumlah Kecamatan, Desa, Dusun, RT dan RW</h6>
+          <p class="mb-4">Sumber: Badan Pusat Statistik Kabupaten Bojonegoro Tahun 2013 </p>
+          </p><a target="_blank"
+            href="https://bojonegorokab.bps.go.id/statictable/2015/03/25/111/jumlah-desa-kelurahan-dusun-lingkungan-rt-dan-rw-per-kecamatan-di-kab-bojonegoro-.html">Baca
+            Selengkapnya...</a>.</p>
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Kecamatan</th>
+                      <th>Desa/Kelurahan</th>
+                      <th>Dusun</th>
+                      <th>Rukun Warga</th>
+                      <th>Rukun Tetangga</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bojonegoro</td>
+                      <td>18</td>
+                      <td>41</td>
+                      <td>43</td>
+                      <td>105</td>
+                    </tr>
+                    <tr>
+                      <td>Sekar</td>
+                      <td>6</td>
+                      <td>35</td>
+                      <td>60</td>
+                      <td>155</td>
+                    </tr>
+                    <tr>
+                      <td>Gayam</td>
+                      <td>12</td>
+                      <td>37</td>
+                      <td>61</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Margomulyo</td>
+                      <td>6</td>
+                      <td>41</td>
+                      <td>43</td>
+                      <td>105</td>
+                    </tr>
+                    <tr>
+                      <td>Ngraho</td>
+                      <td>16</td>
+                      <td>58</td>
+                      <td>131</td>
+                      <td>318</td>
+                    </tr>
+                    <tr>
+                      <td>Tambakrejo</td>
+                      <td>18</td>
+                      <td>66</td>
+                      <td>89</td>
+                      <td>357</td>
+                    </tr>
+                    <tr>
+                      <td>Ngambon</td>
+                      <td>5</td>
+                      <td>16</td>
+                      <td>23</td>
+                      <td>66</td>
+                    </tr>
+                    <tr>
+                      <td>Bubulan</td>
+                      <td>5</td>
+                      <td>17</td>
+                      <td>25</td>
+                      <td>86</td>
+                    </tr>
+                    <tr>
+                      <td>Gondang</td>
+                      <td>7</td>
+                      <td>32</td>
+                      <td>45</td>
+                      <td>166</td>
+                    </tr>
+                    <tr>
+                      <td>Temayang</td>
+                      <td>12</td>
+                      <td>37</td>
+                      <td>26</td>
+                      <td>110</td>
+                    </tr>
+                    <tr>
+                      <td>Sugihwaras</td>
+                      <td>17</td>
+                      <td>54</td>
+                      <td>88</td>
+                      <td>287</td>
+                    </tr>
+                    <tr>
+                      <td>Kedungadem</td>
+                      <td>23</td>
+                      <td>95</td>
+                      <td>164</td>
+                      <td>586</td>
+                    </tr>
+                    <tr>
+                      <td>Kepohbaru</td>
+                      <td>25</td>
+                      <td>73</td>
+                      <td>102</td>
+                      <td>438</td>
+                    </tr>
+                    <tr>
+                      <td>Baureno</td>
+                      <td>25</td>
+                      <td>56</td>
+                      <td>165</td>
+                      <td>462</td>
+                    </tr>
+                    <tr>
+                      <td>Kanor</td>
+                      <td>25</td>
+                      <td>59</td>
+                      <td>97</td>
+                      <td>408</td>
+                    </tr>
+                    <tr>
+                      <td>Sumberrejo</td>
+                      <td>26</td>
+                      <td>79</td>
+                      <td>99</td>
+                      <td>430</td>
+                    </tr>
+                    <tr>
+                      <td>Balen</td>
+                      <td>23</td>
+                      <td>56</td>
+                      <td>80</td>
+                      <td>430</td>
+                    </tr>
+                    <tr>
+                      <td>Sukosewu</td>
+                      <td>14</td>
+                      <td>41</td>
+                      <td>53</td>
+                      <td>288</td>
+                    </tr>
+                    <tr>
+                      <td>Kapas</td>
+                      <td>21</td>
+                      <td>35</td>
+                      <td>43</td>
+                      <td>309</td>
+                    </tr>
+                    <tr>
+                      <td>Trucuk</td>
+                      <td>12</td>
+                      <td>26</td>
+                      <td>30</td>
+                      <td>174</td>
+                    </tr>
+                    <tr>
+                      <td>Dander</td>
+                      <td>16</td>
+                      <td>43</td>
+                      <td>69</td>
+                      <td>366</td>
+                    </tr>
+                    <tr>
+                      <td>Ngasem</td>
+                      <td>17</td>
+                      <td>53</td>
+                      <td>96</td>
+                      <td>348</td>
+                    </tr>
+                    <tr>
+                      <td>Kalitidu</td>
+                      <td>18</td>
+                      <td>44</td>
+                      <td>79</td>
+                      <td>289</td>
+                    </tr>
+                    <tr>
+                      <td>Malo</td>
+                      <td>20</td>
+                      <td>52</td>
+                      <td>101</td>
+                      <td>230</td>
+                    </tr>
+                    <tr>
+                      <td>Purwosari</td>
+                      <td>12</td>
+                      <td>32</td>
+                      <td>61</td>
+                      <td>201</td>
+                    </tr>
+                    <tr>
+                      <td>Padangan</td>
+                      <td>16</td>
+                      <td>37</td>
+                      <td>59</td>
+                      <td>207</td>
+                    </tr>
+                    <tr>
+                      <td>Kasiman</td>
+                      <td>10</td>
+                      <td>30</td>
+                      <td>41</td>
+                      <td>179</td>
+                    </tr>
+                    <tr>
+                      <td>Kedewan</td>
+                      <td>5</td>
+                      <td>11</td>
+                      <td>18</td>
+                      <td>69</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Sistem Informasi Kependudukan Kabupaten Bojonegoro</span>
+            <img class="img-profile rounded-circle" src="img/webicon.png" width="30px">
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
+
+</body>
+
+</html>
