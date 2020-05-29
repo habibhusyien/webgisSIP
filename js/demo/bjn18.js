@@ -9,21 +9,21 @@ var myLineChart = new Chart(ctx, {
     data: {
         labels: ["Pacul", "Jetak", "Sukorejo", "Sumbang", "Mojokampung", "Klangon", "Kepatihan", "Semanding", "Kauman", "Kadipaten", "Ngrowo", "Karangpacar", "Ledok Wetan", "Campurejo", "Banjarjo", "Ledok Kulon", "Mulyoagung", "Kalirejo"],
         datasets: [{
-                label: "Jumlah Penduduk",
+                label: "Jumlah",
                 backgroundColor: "pink",
                 borderColor: "red",
                 borderWidth: 1,
                 data: [3559, 3067, 10940, 7432, 5465, 5654, 3681, 4370, 1344, 4001, 2400, 12084, 5107, 5239, 5088, 2441, 4784, 3914, ]
             },
             {
-                label: "Penduduk  (Lk)",
+                label: "(Lk)",
                 backgroundColor: "lightblue",
                 borderColor: "blue",
                 borderWidth: 1,
                 data: [1686, 1547, 5469, 3701, 2692, 2838, 1876, 2124, 661, 1747, 1138, 5865, 2568, 2597, 2442, 1237, 2375, 1898]
             },
             {
-                label: "Penduduk (Pr)",
+                label: "(Pr)",
                 backgroundColor: "lightgreen",
                 borderColor: "green",
                 borderWidth: 1,
@@ -43,8 +43,7 @@ var myLineChart = new Chart(ctx, {
         },
         legend: {
             display: true,
-            position: "bottom",
-            fontstyle: "small"
+            position: "top",
         }
     }
 });
