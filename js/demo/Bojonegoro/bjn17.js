@@ -3,7 +3,7 @@ Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSyste
 Chart.defaults.global.defaultFontColor = '#292b2c';
 
 // Bar Chart Example
-var ctx = document.getElementById("bjn18");
+var ctx = document.getElementById("bjn17");
 var myLineChart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -27,7 +27,7 @@ var myLineChart = new Chart(ctx, {
                 backgroundColor: "lightgreen",
                 borderColor: "green",
                 borderWidth: 1,
-                data: [1872, 1520, 5471, 3731, 2773, 2816, 1805, 2246, 683, 2254, 1262, 6219, 2539, 2642, 1204, 2409, 2016]
+                data: [1872, 1520, 5471, 3731, 2773, 2816, 1805, 2246, 683, 2254, 1262, 6219, 2539, 2642, 2646, 1204, 2409, 2016]
             },
 
         ],

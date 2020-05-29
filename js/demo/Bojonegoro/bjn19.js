@@ -3,31 +3,34 @@ Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSyste
 Chart.defaults.global.defaultFontColor = '#292b2c';
 
 // Bar Chart Example
-var ctx = document.getElementById("bjn17");
+var ctx = document.getElementById("bjn19");
 var myLineChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ["Pacul", "Jetak", "Sukorejo", "Sumbang", "Mojokampung", "Klangon", "Kepatihan", "Semanding", "Kauman", "Kadipaten", "Ngrowo", "Karangpacar", "Ledok Wetan", "Campurejo", "Banjarjo", "Ledok Kulon", "Mulyoagung", "Kalirejo"],
         datasets: [{
-                label: "Jumlah Penduduk",
+                label: "Jumlah",
                 backgroundColor: "pink",
                 borderColor: "red",
                 borderWidth: 1,
-                data: [3559, 3067, 10940, 7432, 5465, 5654, 3681, 4370, 1344, 4001, 2400, 12084, 5107, 5239, 5088, 2441, 4784, 3914, ]
+                showInLegend: true,
+                data: [3515, 2843, 10823, 6499, 5061, 5745, 3735, 4332, 1476, 3994, 2397, 12687, 5087, 5266, 4862, 2774, 4977, 3881]
             },
             {
-                label: "Penduduk  (Lk)",
+                label: "(Lk)",
                 backgroundColor: "lightblue",
                 borderColor: "blue",
                 borderWidth: 1,
-                data: [1686, 1547, 5469, 3701, 2692, 2838, 1876, 2124, 661, 1747, 1138, 5865, 2568, 2597, 2442, 1237, 2375, 1898]
+                showInLegend: true,
+                data: [1629, 1457, 5277, 3160, 2459, 2885, 1885, 2108, 723, 1742, 1136, 6144, 2558, 2598, 2383, 1422, 2465, 1857]
             },
             {
-                label: "Penduduk (Pr)",
+                label: "(Pr)",
                 backgroundColor: "lightgreen",
                 borderColor: "green",
                 borderWidth: 1,
-                data: [1872, 1520, 5471, 3731, 2773, 2816, 1805, 2246, 683, 2254, 1262, 6219, 2539, 2642, 1204, 2409, 2016]
+                showInLegend: true,
+                data: [1886, 1386, 5546, 3339, 2602, 2860, 1850, 2224, 753, 2252, 1261, 6543, 2529, 2668, 2479, 1352, 2512, 2024]
             },
 
         ],
@@ -37,12 +40,12 @@ var myLineChart = new Chart(ctx, {
             xAxes: [{}],
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
+                    beginAtZero: false
                 }
             }],
         },
         legend: {
-            position: "top"
+
         }
     }
 });
