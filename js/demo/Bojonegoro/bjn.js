@@ -7,7 +7,7 @@ var ctx = document.getElementById("gabung");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["2017", "2018", "2019"],
+    labels: ["2015", "2016", "2017", "2018", "2019"],
     datasets: [{
       label: "Jumlah",
       lineTension: 0.3,
@@ -20,7 +20,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBackgroundColor: "rgba(2,117,216,1)",
       pointHitRadius: 50,
       pointBorderWidth: 2,
-      data: [90570, 91023, 89965],
+      data: [91179, 92279, 90570, 91023, 89965],
 
     }],
   },
@@ -40,7 +40,7 @@ var myLineChart = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 89000,
-          max: 92000,
+          max: 92500,
           maxTicksLimit: 5
         },
         gridLines: {
