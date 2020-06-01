@@ -2705,8 +2705,8 @@ fieldset:disabled a.btn {
 
 .btn-info {
     color: #fff;
-    background-color: #36b9cc;
-    border-color: #36b9cc
+    background-color: #3652cc;
+    border-color: #3672cc
 }
 
 .btn-info:hover {
@@ -5025,7 +5025,7 @@ input[type=submit].btn-block {
 .breadcrumb {
     display: flex;
     flex-wrap: wrap;
-    padding: .75rem 1rem;
+    padding: .45rem 1rem;
     margin-bottom: 1rem;
     list-style: none;
     background-color: #eaecf4;
