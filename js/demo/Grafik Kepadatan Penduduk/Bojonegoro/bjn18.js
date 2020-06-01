@@ -31,8 +31,7 @@ var myLineChart = new Chart(ctx, {
             yAxes: [{}],
         },
         legend: {
-            display: true,
-            position: "top",
+            display: false,
         }
     }
 });
