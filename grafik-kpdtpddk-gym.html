@@ -23,7 +23,6 @@
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-
 </head>
 
 <body id="page-top">
@@ -181,39 +180,44 @@
                 </ol>
 
                 <div>
-                  <div class="card mb-3">
-                    <div class="card-header"><i class="fas fa-chart-area mr-1"></i>Grafik Perubahan Kepadatan Penduduk
-                      Kec. Gayam 5 Tahun Terakhir</div>
-                    <div class="card-body"><canvas id="gym" width="100%" height="30%"></canvas></div>
+                  <!-- Dropdown Card Example -->
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Grafik Perubahan Kepadatan Penduduk Kec. Gayam
+                        5
+                        Tahun Terakhir</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <div id="chart-body"><canvas id="gym" width="100%" height="30%"></canvas></div>
+                    </div>
                   </div>
-                </div>
 
-
-                <div class="card mb-3">
-                  <div class="card-header"><i class="fas fa-chart-area mr-1"></i>Grafik Kepadatan Penduduk Kec. Gayam
-                    Tahun 2017</div>
-                  <div class="chart-body">
-                    <div class="chart-body"><canvas id="gym17" width="100%" height="30%"></canvas></div>
+                  <!-- Dropdown Card Example -->
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Grafik Kepadatan Penduduk Kec. Gayam </h6>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false">
+                          Pilih Tahun
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <button class="dropdown-item" onclick="updateChart1()" type="button">2017</button>
+                          <button class="dropdown-item" onclick="updateChart2()" type="button">2018</button>
+                          <button class="dropdown-item" onclick="updateChart3()" type="button">2019</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <div id="chart-body"><canvas id="Grafik Gayam" width="100%" height="30%"></canvas></div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="card mb-3">
-                  <div class="card-header"><i class="fas fa-chart-area mr-1"></i>Grafik Jumlah Penduduk Kec. Gayam
-                    Tahun 2018</div>
-                  <div class="chart-body">
-                    <div class="chart-body"><canvas id="gym18" width="100%" height="30%"></canvas></div>
-                  </div>
                 </div>
-
-                <div class="card mb-3">
-                  <div class="card-header"><i class="fas fa-chart-area mr-1"></i>Grafik Jumlah Penduduk Kec. Gayam
-                    Tahun 2019</div>
-                  <div class="chart-body">
-                    <div class="chart-body"><canvas id="gym19" width="100%" height="30%"></canvas></div>
-                  </div>
-                </div>
-
-              </div>
             </main>
           </div>
         </div>
@@ -256,11 +260,8 @@
   <script src="vendor/chart.js/Chart.min.js"></script>
 
   <!-- Page level custom scripts -->
+  <script src="js/demo/Grafik Kepadatan Penduduk/Gayam/Grafik Gayam.js "></script>
   <script src="js/demo/Grafik Kepadatan Penduduk/Gayam/gym.js"></script>
-  <script src="js/demo/Grafik Kepadatan Penduduk/Gayam/gym17.js"></script>
-  <script src="js/demo/Grafik Kepadatan Penduduk/Gayam/gym18.js"></script>
-  <script src="js/demo/Grafik Kepadatan Penduduk/Gayam/gym19.js"></script>
-
 
 </body>
 

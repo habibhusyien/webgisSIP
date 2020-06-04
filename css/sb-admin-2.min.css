@@ -2629,19 +2629,19 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
     color: #fff;
-    background-color: #858796;
-    border-color: #858796
+    background-color: #4553c0;
+    border-color: #cdd0e4
 }
 
 .btn-secondary:hover {
     color: #fff;
-    background-color: #717384;
-    border-color: #6b6d7d
+    background-color: #4e73df;
+    border-color: #4e73df;
 }
 
 .btn-secondary.focus,
 .btn-secondary:focus {
-    box-shadow: 0 0 0 .2rem rgba(151, 153, 166, .5)
+    box-shadow: 0 0 0 .2rem rgba(61, 195, 236, 0.5)
 }
 
 .btn-secondary.disabled,
@@ -4271,7 +4271,8 @@ input[type=submit].btn-block {
 .custom-control-label::before,
 .custom-file-label,
 .custom-select {
-    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 15rem
 }
 
 @media (prefers-reduced-motion:reduce) {
