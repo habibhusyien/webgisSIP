@@ -92,11 +92,11 @@
 
             if (e.target.feature.geometry.type === 'LineString') {
                 highlightLayer.setStyle({
-                    color: '#ffffff',
+                    color: '#9e9e9e',
                 });
             } else {
                 highlightLayer.setStyle({
-                    fillColor: '#ffffff',
+                    fillColor: '#9e9e9e',
                     fillOpacity: 1
                 });
             }
@@ -105,7 +105,7 @@
         var map = L.map('map', {
             zoomControl: true,
             maxZoom: 28,
-            minZoom: 1
+            minZoom: 12
         }).fitBounds([
             [-7.303668275802665, 111.59252767069886],
             [-7.094651447321369, 111.90260590591836]
@@ -113,7 +113,7 @@
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix(
             '<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>'
-        );
+            );
         var autolinker = new Autolinker({
             truncate: {
                 length: 30,
@@ -134,7 +134,7 @@
             pane: 'pane_GoogleSatellite_0',
             opacity: 1.0,
             attribution: '<a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
-            minZoom: 1,
+            minZoom: 12,
             maxZoom: 28,
             minNativeZoom: 0,
             maxNativeZoom: 20
@@ -188,7 +188,7 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 1,
-                            fillColor: 'rgba(213,93,101,0.75)',
+                            fillColor: 'rgba(255,127,0,0.75)',
                             interactive: true,
                     }
                     break;
@@ -203,7 +203,7 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 1,
-                            fillColor: 'rgba(142,32,232,0.75)',
+                            fillColor: 'rgba(224,255,187,0.75)',
                             interactive: true,
                     }
                     break;
@@ -218,7 +218,7 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 1,
-                            fillColor: 'rgba(123,212,145,0.75)',
+                            fillColor: 'rgba(255,238,1,0.75)',
                             interactive: true,
                     }
                     break;
@@ -233,7 +233,7 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 1,
-                            fillColor: 'rgba(118,106,226,0.75)',
+                            fillColor: 'rgba(84,123,220,0.75)',
                             interactive: true,
                     }
                     break;
@@ -248,7 +248,7 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 1,
-                            fillColor: 'rgba(168,201,97,0.75)',
+                            fillColor: 'rgba(224,218,94,0.75)',
                             interactive: true,
                     }
                     break;
@@ -263,7 +263,7 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 1,
-                            fillColor: 'rgba(211,142,95,0.75)',
+                            fillColor: 'rgba(5,255,1,0.75)',
                             interactive: true,
                     }
                     break;
@@ -278,7 +278,7 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 1,
-                            fillColor: 'rgba(210,193,97,0.75)',
+                            fillColor: 'rgba(223,56,126,0.75)',
                             interactive: true,
                     }
                     break;
@@ -293,7 +293,7 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 1,
-                            fillColor: 'rgba(203,98,202,0.75)',
+                            fillColor: 'rgba(166,206,227,0.75)',
                             interactive: true,
                     }
                     break;
@@ -308,7 +308,7 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 1,
-                            fillColor: 'rgba(231,109,172,0.75)',
+                            fillColor: 'rgba(73,41,213,0.75)',
                             interactive: true,
                     }
                     break;
@@ -323,7 +323,7 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 1,
-                            fillColor: 'rgba(97,201,71,0.75)',
+                            fillColor: 'rgba(204,77,73,0.75)',
                             interactive: true,
                     }
                     break;
@@ -338,7 +338,7 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 1,
-                            fillColor: 'rgba(63,200,230,0.75)',
+                            fillColor: 'rgba(246,171,171,0.75)',
                             interactive: true,
                     }
                     break;
@@ -353,7 +353,7 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 1,
-                            fillColor: 'rgba(92,138,218,0.75)',
+                            fillColor: 'rgba(211,149,87,0.75)',
                             interactive: true,
                     }
                     break;
@@ -368,7 +368,7 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 1,
-                            fillColor: 'rgba(88,214,179,0.75)',
+                            fillColor: 'rgba(174,63,238,0.75)',
                             interactive: true,
                     }
                     break;
@@ -427,9 +427,9 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['DESA'] !== null ? String(
+            layer.bindTooltip((layer.feature.properties['Luas_Km2'] !== null ? String(
                 '<div style="color: #000000; font-size: 10pt; font-weight: bold; font-family: \'MS Shell Dlg 2\', sans-serif;">' +
-                layer.feature.properties['DESA']) + '</div>' : ''), {
+                layer.feature.properties['Luas_Km2']) + '</div>' : ''), {
                 permanent: true,
                 offset: [-0, -16],
                 className: 'css_Administrasi_1'
