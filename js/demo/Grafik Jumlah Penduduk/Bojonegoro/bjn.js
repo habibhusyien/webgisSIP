@@ -22,7 +22,6 @@ var myLineChart = new Chart(ctx, {
       pointHitRadius: 50,
       pointBorderWidth: 2,
       data: olddata,
-
     }],
   },
   options: {
